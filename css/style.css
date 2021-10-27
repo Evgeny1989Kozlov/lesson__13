@@ -1,0 +1,1209 @@
+/* ! Подключение шрифтов */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@font-face {
+   font-family: "Helvetica Neue";
+   src: url("../fonts/HelveticaNeue-CondensedBlack.woff2") format("woff2"),
+      url("../fonts/HelveticaNeue-CondensedBlack.woff") format("woff");
+   font-weight: 900;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Helvetica Neue";
+   src: url("../fonts/HelveticaNeue.woff2") format("woff2"), url("../fonts/HelveticaNeue.woff") format("woff");
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "HelveticaNeueCyr";
+   src: url("HelveticaNeueCyr-Bold.woff2") format("woff2"), url("HelveticaNeueCyr-Bold.woff") format("woff");
+   font-weight: bold;
+   font-style: normal;
+   font-display: swap;
+}
+
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   box-sizing: border-box;
+}
+li {
+   list-style: none;
+}
+a,
+a:visited {
+   text-decoration: none;
+}
+a:hover {
+   text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: inherit;
+   font-size: inherit;
+}
+img {
+   vertical-align: top;
+}
+html,
+body {
+   height: 100%;
+}
+html {
+   font-size: 16px; /* по умолчанию */
+}
+body {
+   line-height: 1;
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   height: 100%;
+   overflow-x: hidden;
+}
+.wrapper {
+   min-height: 100%;
+   /* overflow: hidden; */
+}
+
+.cont {
+   max-width: 1000px;
+   margin: 0 auto;
+   padding: 10px;
+}
+
+/* *общие классы */
+
+/* .wrapper > div:not(:last-child) {
+   margin-bottom: 50px;
+} */
+
+h1 {
+   font-size: 72px;
+   color: rgba(14, 89, 151, 0.733);
+   text-shadow: 3px -5px 10px rgb(154, 43, 182);
+   margin-bottom: 20px;
+   text-align: center;
+}
+h1 span {
+   font-size: 62px;
+   color: rgba(14, 165, 157, 0.733);
+   text-shadow: 3px -5px 10px rgb(92, 43, 182);
+   margin-bottom: 20px;
+}
+
+h1 span:last-child {
+   font-size: 52px;
+   color: rgba(132, 165, 14, 0.733);
+   text-shadow: 3px -5px 10px rgb(43, 119, 182);
+   margin-bottom: 20px;
+}
+
+h2 {
+   display: inline-block;
+   padding: 5px;
+   font-size: 50px;
+   color: rgba(36, 66, 60, 0.623);
+   /* max-width: 240px; */
+   box-shadow: 6px 9px 4px rgba(52, 153, 221, 0.651);
+   margin-bottom: 25px;
+}
+.spspi h2 {
+   box-shadow: 6px 9px 4px rgb(148, 221, 52);
+   padding: 10px 10px 20px;
+   background: rgba(136, 102, 68, 0.377);
+}
+h2.nadhealth {
+   color: rgb(29, 53, 51);
+   text-transform: capitalize;
+   background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.65) 2%,
+      rgba(0, 0, 0, 0.65) 5%,
+      rgba(0, 0, 0, 0) 58%,
+      rgba(0, 0, 0, 0) 100%
+   );
+   display: inline-block;
+   box-shadow: none;
+}
+h2.nadhealth span {
+   background: none;
+}
+
+h2 span {
+   display: inline-block;
+   color: indianred;
+   background: radial-gradient(
+      ellipse at center,
+      rgba(245, 246, 246, 1) 0%,
+      rgba(219, 220, 226, 1) 21%,
+      rgba(184, 186, 198, 1) 49%,
+      rgba(221, 223, 227, 1) 80%,
+      rgba(245, 246, 246, 1) 100%
+   );
+   border-radius: 20px;
+}
+
+main {
+   padding: 50px;
+}
+
+/*!  -------------------------Задачи от Сансея!---------------------------- */
+/* !------------------------------------- */
+.main__anim-wrapp {
+   position: sticky;
+   z-index: 600;
+   background: url("../img/shtora-back.png") 0px 0px / cover no-repeat;
+}
+
+/* !----------------------------------- */
+.main__animation::after {
+   content: "";
+   background: url("../img/shtora-back.png") 300px 0px / cover no-repeat,
+      url("../img/shtora-right.png") center / cover no-repeat;
+   height: 100%;
+   width: 500px;
+   position: absolute;
+   bottom: 0px;
+   right: -330px;
+
+   animation-name: shtora;
+   animation-duration: 3s;
+   animation-delay: 16.5s;
+   z-index: 449;
+}
+
+@keyframes shtora-right {
+   0% {
+      /* css свойства */
+
+      transform: translate(0%, 0px) rotate(0deg);
+   }
+
+   100% {
+      /* css свойства */
+      transform: translate(0px, 0px);
+      width: 1000px;
+      /* background: url("../img/shtora-back.png") 0px 0px no-repeat; */
+   }
+}
+
+/* !---------------------------------------*/
+/* *___________________sun___________ */
+
+.animation__sun {
+   background: yellow;
+   width: 90px;
+   height: 90px;
+   border-radius: 50%;
+   position: absolute;
+   top: 10%;
+   left: 15%;
+   z-index: 110;
+   box-shadow: 0px 0px 10px 2px rgba(255, 255, 0, 0.596);
+   animation-name: sun;
+   animation-duration: 3s;
+   animation-fill-mode: both;
+
+   animation-iteration-count: infinite;
+}
+
+@keyframes sun {
+   0% {
+      /* css свойства */
+
+      box-shadow: 0px 0px 10px 7px rgba(255, 255, 0, 0.596);
+   }
+
+   100% {
+      /* css свойства */
+      box-shadow: 0px 0px 10px 22px rgba(255, 255, 0, 0.596);
+   }
+}
+/* !------------------------------------- */
+/* *___________________sign___________ */
+.animation__sign {
+   width: 90px;
+}
+.animation__cont-sign {
+   position: absolute;
+   top: 34%;
+   left: 0px;
+   animation-name: sign;
+   animation-duration: 4.5s;
+   animation-timing-function: linear;
+   animation-delay: 2s;
+   transform: translate(-100%, 0px);
+}
+
+.animation__pilar {
+   display: block;
+   width: 7px;
+   height: 100px;
+   background: #000;
+   position: relative;
+   top: 0;
+   left: 41px;
+}
+
+@keyframes sign {
+   0% {
+      /* css свойства */
+
+      transform: translate(100%, 30px);
+   }
+
+   100% {
+      /* css свойства */
+      transform: translate(1200px, 0px);
+   }
+}
+
+/* !------------------------------ */
+/* *___________________plane___________ */
+
+.plane__first-img {
+   width: 200px;
+}
+
+.plane__absolute {
+   position: absolute;
+   right: 0px;
+   top: 70px;
+   transform: translate(100%, 0px);
+   animation-name: planee;
+   animation-duration: 7s;
+   animation-delay: 9.5s;
+   z-index: 89;
+}
+
+.plane__unification {
+   perspective: 200px;
+   position: relative;
+   display: inline-block;
+   width: 170px;
+   height: 210px;
+}
+
+.plane__unification::before {
+   content: "";
+   display: block;
+   position: absolute;
+   top: 100px;
+   left: 52%;
+   width: 4px;
+   height: 120px;
+   background: #000;
+}
+
+@keyframes planee {
+   0% {
+      /* css свойства */
+
+      transform: translate(-100%, 0px);
+   }
+
+   20% {
+      transform: translate(-600px, 0px);
+   }
+   80% {
+      transform: translate(-600px, 0px);
+   }
+
+   100% {
+      /* css свойства */
+      transform: translate(-800px, -600px) rotate(40deg);
+   }
+}
+.plane__sec-img {
+   width: 250px;
+   transform: rotatey(189deg) scale(0.75);
+   position: absolute;
+   top: 135px;
+   left: 0px;
+   z-index: 89;
+   animation-name: tramp;
+   animation-duration: 7s;
+   animation-delay: 10.5s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes tramp {
+   0% {
+      /* css свойства */
+
+      top: 135px;
+   }
+
+   20% {
+      /* css свойства */
+      top: 332px;
+   }
+   60% {
+      /* css свойства */
+      top: 332px;
+   }
+   70% {
+      /* css свойства */
+      top: 135px;
+   }
+
+   100% {
+      /* css свойства */
+      top: 135px;
+   }
+}
+
+/* !------------------------------ */
+/* *___________________cow___________ */
+.animation__cow {
+   width: 180px;
+   position: absolute;
+   bottom: 0%;
+   left: 10px;
+   animation-name: cow;
+   transform: translate(-100%, 0px);
+   animation-delay: 5s;
+   animation-duration: 4s;
+   z-index: 70;
+   animation-fill-mode: forwards;
+   animation-iteration-count: 1;
+}
+
+@keyframes cow {
+   0% {
+      /* css свойства */
+
+      transform: translate(0%, 30px) rotate(-45deg);
+   }
+
+   20% {
+      /* css свойства */
+
+      transform: translate(30%, -30px) rotate(0deg);
+   }
+
+   30% {
+      transform: translate(50%, 30px);
+      /* css свойства */
+   }
+
+   40% {
+      /* css свойства */
+
+      transform: rotate(-45deg);
+   }
+
+   60% {
+      /* css свойства */
+
+      transform: translate(70%, 15px) rotate(0deg);
+   }
+
+   90% {
+      /* css свойства */
+
+      transform: translate(75%, 15px) rotate(-45deg);
+   }
+
+   100% {
+      /* css свойства */
+      transform: translate(200px, 20px);
+   }
+}
+
+/* !------------------------- */
+/* *___________________car___________ */
+
+.main__car {
+   position: absolute;
+   top: 465px;
+   left: 23%;
+   width: 970px;
+   transform: scale(0.5);
+   animation-name: car, car-finish;
+   animation-duration: 4.5s, 4s;
+   animation-delay: 0.5s, 12s;
+   animation-iteration-count: 1, 1;
+   animation-fill-mode: forwards, forwards;
+   z-index: 90;
+}
+
+@keyframes car {
+   0% {
+      /* css свойства */
+      transform: rotate(3deg);
+      transform: translate(0px, 0px) scale(0.5) rotate(2deg);
+   }
+
+   30% {
+      transform: translate(-300px, 0px) scale(0.5) rotate(0deg);
+   }
+
+   100% {
+      /* css свойства */
+      transform: translate(240px, 0px) scale(0.5) rotate(0deg);
+   }
+}
+
+@keyframes car-finish {
+   0% {
+      /* css свойства */
+      transform: rotate(3deg);
+      transform: translate(140px, 0px) scale(0.5) rotate(5deg);
+   }
+
+   15% {
+      transform: translate(-200px, -55px) scale(0.5) rotate(20deg);
+   }
+   30% {
+      transform: translate(-450px, -130px) scale(0.5) rotate(35deg);
+   }
+
+   50% {
+      transform: translate(-700px, -130px) scale(0.5) rotate(20deg);
+   }
+
+   100% {
+      transform: translate(-1000px, -70px) scale(0.01) rotate(20deg);
+   }
+}
+
+/* !--------------------------------- */
+/* *___________________marks-road___________ */
+
+.animation__road-sign,
+.animation__sign-road {
+   position: absolute;
+   bottom: 100px;
+   left: 10px;
+   z-index: 46;
+}
+
+.animation__road-sign {
+   transform: translate(-68%, 0px);
+}
+
+.animation__sign-road {
+   transform: translate(45%, 0px);
+}
+.animation__road-sign span {
+   display: inline-block;
+   background: #fff;
+   height: 20px;
+   width: 50px;
+   /* position: absolute;
+   bottom: 40px;
+   left: 60px; */
+   z-index: 11;
+   animation-name: asf;
+   animation-duration: 5s;
+   margin-right: 80px;
+   animation-iteration-count: 1;
+   animation-timing-function: linear;
+   animation-delay: 0.5s;
+   animation-fill-mode: both;
+}
+
+.animation__sign-road span {
+   display: inline-block;
+   background: #fff;
+   height: 20px;
+   width: 50px;
+   /* position: absolute;
+   bottom: 40px;
+   left: 60px; */
+   z-index: 12;
+   animation-name: fas;
+   animation-duration: 5s;
+   margin-right: 80px;
+   animation-iteration-count: 1;
+   animation-delay: 0.5s;
+   animation-timing-function: linear;
+   animation-fill-mode: both;
+}
+.animation__road-sign span:not(:last-child) {
+}
+
+/* !------------------------------------- */
+/* *hood */
+.main__container {
+   max-width: 1180px;
+   margin: 0 auto;
+   background: rgb(109, 167, 221);
+   height: 600px;
+   position: relative;
+}
+
+.main__container::after {
+   content: "";
+   background: rgba(0, 0, 0, 0.815);
+   height: 210px;
+   width: 100%;
+   position: absolute;
+   bottom: 0px;
+   left: 0px;
+}
+
+.main__container::before {
+   content: "";
+   background: url("../img/shtora-back.png") -793px 0px / cover no-repeat,
+      url("../img/shtora.png") center / cover no-repeat;
+   height: 100%;
+   width: 1000px;
+   position: absolute;
+   bottom: 0px;
+   left: -339px;
+   z-index: 10;
+   animation-name: shtora;
+   animation-duration: 3s;
+   animation-delay: 16.5s;
+   z-index: 165;
+}
+
+@keyframes shtora {
+   0% {
+      /* css свойства */
+
+      transform: translate(0%, 0px) rotate(0deg);
+   }
+   /* 
+   60% {
+    
+
+      transform: translate(400px, 0px) rotate(0deg);
+   } */
+
+   /* 
+   50% {
+      transform: translate(300px, 300px) skew(45deg, -10deg) rotate(100deg);
+      
+   } */
+
+   100% {
+      /* css свойства */
+      transform: translate(0px, 0px);
+      width: 1900px;
+      /* background: url("../img/shtora-back.png") 0px 0px no-repeat; */
+   }
+}
+
+@keyframes asf {
+   0% {
+      /* css свойства */
+
+      transform: translate(0%, 0px) rotate(0deg);
+   }
+
+   100% {
+      /* css свойства */
+      transform: translate(700px, 0px);
+   }
+}
+
+@keyframes fas {
+   0% {
+      /* css свойства */
+
+      transform: translate(0%, 0px) rotate(0deg);
+   }
+
+   100% {
+      /* css свойства */
+      transform: translate(600px, 0px);
+   }
+}
+
+.main__hood {
+   position: absolute;
+   top: 80px;
+   left: 17%;
+}
+.hood {
+}
+.hood__rectange {
+   width: 286px;
+   height: 76px;
+   background: #ffe77d;
+   border: 3px double rgba(0, 0, 0, 0.671);
+   border-bottom: 0;
+   border-radius: 59px 0px 0px 0px;
+   position: relative;
+   left: 19px;
+}
+
+.hood__rectange::before {
+   content: "";
+   position: absolute;
+   bottom: -14px;
+   background: #5d62b5;
+   left: -15px;
+   width: 17px;
+   height: 15px;
+   left: -14px;
+   border-radius: 20px 0px 0px 20px;
+   background: #d5cfd1;
+}
+
+.hood__rectange::after {
+   content: "";
+   position: absolute;
+   bottom: 21px;
+   background: #5d62b5;
+   left: -7.5px;
+   width: 6px;
+   height: 14px;
+   background: #d5cfd1;
+   border-radius: 10px 0px 0px 10px;
+   box-shadow: inset 0px 4px 2px #fff;
+}
+.hood__spans {
+   position: absolute;
+   top: 20px;
+   left: 140px;
+   z-index: 56;
+   height: 30px;
+   width: 10px;
+}
+.hood__line-rectange {
+   display: block;
+   height: 2px;
+   background-color: #000;
+   width: 10px;
+}
+.hood__line-rectange:not(:last-child) {
+   margin-bottom: 3px;
+}
+
+/* .hood__rectange::before {
+   content: "";
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 6px;
+   height: 30%;
+   background: #ffe77d;
+} */
+
+.hood__fender {
+   width: 134px;
+   height: 70px;
+   background: #ffe77d;
+   border: 3px solid rgba(0, 0, 0, 0.671);
+   border-bottom: 0;
+   box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.459);
+   /* transform: skew(15deg, 10deg); */
+
+   /* border-radius: 60% 40% 87% 13% / 11% 82% 18% 89%; */
+   /* border-radius: 29% 71% 38% 62% / 50% 13% 87% 50%; */
+   border-radius: 25% 15% 119% 144% / 50% 13% 87% 50%;
+
+   /* transform: rotate3d(1, 1, 1, 45deg); */
+   transform: rotate(180deg);
+   position: relative;
+   top: -55px;
+   left: 20px;
+   overflow: hidden;
+   z-index: 22;
+}
+
+.hood__fender-line {
+   width: 150px;
+   height: 17px;
+   background: #ffe77d;
+   position: relative;
+   top: -30px;
+   left: 0px;
+}
+/* .hood__fender::before {
+   content: "";
+   display: block;
+   width: 70%;
+   height: 5px;
+   background: #fff2b1;
+   transform: skew(-10deg, 10deg);
+   transform: rotate(-181deg);
+   border-radius: 60% 40% 87% 13% / 11% 82% 18% 89%;
+   position: relative;
+   top: 3px;
+   left: 3px;
+} */
+
+.hood__fender::after {
+   content: "";
+   display: block;
+   width: 65px;
+   height: 65px;
+   background: rgb(0, 0, 0);
+   border-radius: 50%;
+   position: absolute;
+   top: -36px;
+   left: 48%;
+   transform: translate(-40%, 0px);
+}
+
+.hood__wheel {
+   width: 55px;
+   height: 55px;
+   border-radius: 50%;
+   background: silver;
+   position: relative;
+   z-index: 50;
+   top: -75px;
+   left: 55px;
+   border: 9px solid rgba(0, 0, 0, 0.651);
+   animation-name: wheel, whe, wheel;
+   animation-duration: 2s, 5s, 5s;
+   animation-delay: 0s, 2s, 13s;
+   animation-iteration-count: 1, 1, 1;
+}
+
+.hood__wheel::after {
+   content: "";
+   width: 10px;
+   height: 10px;
+   border-radius: 24px;
+   background: silver;
+   position: absolute;
+   /* z-index: 50; */
+   /* bottom: -20px;
+   left: 0;
+   opacity: 0.2;
+   animation-name: line;
+   animation-duration: 2s; */
+}
+
+@keyframes line {
+   0% {
+      /* css свойства */
+   }
+   30% {
+      /* height: 40px;
+      width: 25px;
+      border-radius: 33%;
+      transform: rotate(160deg); */
+      opacity: 1;
+   }
+   /* 
+   50% {
+      transform: translate(300px, 300px) skew(45deg, -10deg) rotate(100deg);
+      
+   } */
+
+   100% {
+      /* css свойства */
+      width: 85px;
+   }
+}
+
+@keyframes wheel {
+   0% {
+      /* css свойства */
+
+      transform: skew(0deg, 10deg) rotate(45deg);
+   }
+   /* 
+   50% {
+      transform: translate(300px, 300px) skew(45deg, -10deg) rotate(100deg);
+      
+   } */
+
+   100% {
+      /* css свойства */
+      transform: scale(1.1) skew(0deg, 20deg) rotate(330deg);
+   }
+}
+@keyframes whe {
+   0% {
+      /* css свойства */
+
+      transform: scale(1.2);
+   }
+
+   50% {
+      transform: scale(1);
+   }
+
+   100% {
+      /* css свойства */
+      transform: scale(1.2);
+   }
+}
+
+.hood__wheel::before {
+   content: "";
+
+   width: 80%;
+   height: 80%;
+   border-radius: 50%;
+   background: #d5cccf;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border: 8px solid #ffa208;
+}
+/* !------------------------------ */
+.cabin {
+}
+
+.main__cabin {
+   position: absolute;
+   top: -7px;
+   left: 31%;
+}
+
+.cabin__container-windows {
+   width: 150px;
+   height: 62px;
+   border-radius: 0px 12px 2px 2px;
+   overflow: hidden;
+   border-right: 1px solid #000;
+   position: relative;
+}
+
+.cabin__container-windows::after {
+   content: "";
+   position: absolute;
+   bottom: 2px;
+   left: 0px;
+   width: 67%;
+   height: 5px;
+   background: #5d62b5;
+   left: 50%;
+   transform: translate(-47%, 0px);
+   border-radius: 70px 0px 0px 0px;
+}
+
+.cabin__windows {
+   width: 150px;
+   height: 62px;
+   background: #ffe77d;
+   position: relative;
+   transform: skew(-30deg, 0deg);
+   overflow: hidden;
+   left: 20px;
+   border-radius: 20px 0px 2px 2px;
+   border: 1px solid #000;
+}
+
+.cabin__windows::before {
+   content: "";
+   width: 17px;
+   height: 36px;
+   position: absolute;
+   top: 12px;
+   left: 0px;
+   /* transform: skew(30deg, 0deg); */
+   background: #9ae0fa;
+   border-radius: 2px 10px 2px 2px;
+}
+.cabin__windows::after {
+   content: "";
+   width: 17px;
+   height: 40px;
+   position: absolute;
+   top: 11px;
+   right: 19.7px;
+   transform: skew(30deg, 0deg);
+   background: #9ae0fa;
+   border-radius: 2px 2px 4px 10px;
+}
+.cabin__line {
+   width: 18%;
+   height: 3px;
+   background: #d9f1fd;
+   border-radius: 70px;
+   position: absolute;
+   right: 15px;
+   top: 26px;
+   transform: rotate(59deg);
+   z-index: 3;
+}
+.cabin__line-rotate {
+   width: 13%;
+   height: 3px;
+   background: #d9f1fd;
+   border-radius: 70px;
+   position: absolute;
+   transform: rotate(87deg);
+   left: -3px;
+   top: 26px;
+
+   z-index: 4;
+}
+
+.cabin__door {
+   overflow: hidden;
+   width: 100px;
+   position: relative;
+   top: 10px;
+   left: 27px;
+   margin-top: -62px;
+   border-right: 1px solid #000;
+   z-index: 11;
+   perspective: 400px;
+   perspective-origin: 0 0;
+}
+.door-up-part {
+}
+/* .door__container {
+   height: 50px;
+   width: 100px;
+   background: #9ae0fa;
+   position: relative;
+   overflow: hidden;
+   transform: skew(-30deg, 0deg);
+   overflow: hidden;
+   left: 15px;
+   border: 1.5px double #000;
+
+   box-shadow: 0px 2px 4px #ffe77d;
+   border-radius: 2px;
+} */
+.door__windows {
+   height: 50px;
+   width: 100px;
+   background: #9ae0fa;
+   position: relative;
+   overflow: hidden;
+   transform: skew(-30deg, 0deg) scale(1, 0.9);
+   /* overflow: hidden; */
+   left: 16px;
+   border: 2px double #000;
+   top: -2px;
+
+   box-shadow: 0px 2px 4px #ffe77d;
+   border-radius: 2px;
+}
+.door__enter {
+   height: 90px;
+   width: 100px;
+   background: #ffe77d;
+   border: 1.5px solid #000;
+   border-radius: 2px;
+   position: relative;
+}
+
+.door__enter:hover {
+   transform: rotateY(-20deg);
+}
+.door__enter::before {
+   content: "";
+   position: absolute;
+   top: 10px;
+   right: 30px;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background: #754;
+   z-index: 60;
+}
+
+.door__enter::after {
+   content: "";
+   position: absolute;
+   top: 13px;
+   right: 47px;
+   width: 15px;
+   height: 1.5px;
+   transform: skew(0deg, -10deg);
+   border-radius: 64% 36% 76% 24% / 31% 13% 87% 69%;
+   background: #754;
+   z-index: 61;
+   left: 63px;
+}
+
+.door__windows::before {
+   content: "";
+   display: block;
+   width: 60%;
+   height: 3px;
+   background: #d9f1fd;
+   border-radius: 70px;
+   position: relative;
+   top: 3px;
+   left: 8px;
+}
+/* .door__windows::after {
+   content: "";
+   display: block;
+   width: 165%;
+   height: 195%;
+   background: #f6d9fd;
+   border-radius: 70px;
+   position: absolute;
+   bottom: 3px;
+   left: 0px;
+   border: 5px solid #9876;
+} */
+/* .main__door-up-part::before {
+   content: "";
+   background: #99dff9;
+   height: 90%;
+   width: 90%;
+   top: 0px;
+   right: 0px;
+   position: absolute;
+   border-radius: 0px 10px 0px 0px;
+   transform: skew(-30deg, 0deg);
+   transform: rotate(259deg);
+   border: 2px solid #000;
+} */
+
+/* .main__door-up-part::after {
+   content: "";
+   background: #99dff9;
+   height: 33px;
+   width: 79px;
+   top: 2px;
+   right: -10px;
+   position: absolute;
+   border-radius: 0px 10px 0px 0px;
+   transform: skew(-30deg, 0deg);
+    transform: rotate(259deg); 
+   border: 2px solid #000;
+}  */
+
+.main__cabin {
+   padding: 25px;
+}
+
+.treshold {
+   width: 253px;
+   height: 24px;
+   background: #ffe77d;
+   border: 2px solid rgba(0, 0, 0, 0.671);
+   border-bottom: 0;
+   position: relative;
+   top: -6px;
+   left: -33px;
+}
+
+.treshold {
+   width: 269px;
+   height: 24px;
+   background: #ffe77d;
+   border: 2px solid rgba(0, 0, 0, 0.671);
+
+   position: relative;
+   top: -6px;
+}
+
+.treshold::after {
+   content: "";
+   width: 100%;
+   height: 10px;
+   background: #c0a959;
+   border: 2px solid rgba(0, 0, 0, 0.671);
+   position: absolute;
+   bottom: -2px;
+   left: 14px;
+   left: -1px;
+   transform: rotate(-180deg);
+   border-radius: 450px;
+}
+
+/* !-------------------------------- */
+/* *trunk */
+.main__trunk {
+   position: absolute;
+   top: 88px;
+   left: 50.3%;
+}
+.trunk__rectangle {
+   width: 200px;
+   height: 65px;
+   background: #ffe77d;
+   border: 3px double rgba(0, 0, 0, 0.671);
+   /* border-bottom: 0; */
+}
+
+.trunk__fender {
+   width: 120px;
+   height: 60px;
+   background: #ffe77d;
+   border: 3px solid rgba(0, 0, 0, 0.671);
+   border-bottom: 0;
+   box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.459);
+   /* transform: skew(15deg, 10deg); */
+   transform: rotate(5deg);
+   border-radius: 60% 40% 87% 13% / 11% 82% 18% 89%;
+   position: relative;
+   top: -40px;
+   left: 50px;
+   overflow: hidden;
+}
+
+.trunk__fender::before {
+   content: "";
+   display: block;
+   width: 70%;
+   height: 5px;
+   background: #fff2b1;
+   transform: skew(-10deg, 10deg);
+   transform: rotate(-181deg);
+   border-radius: 60% 40% 87% 13% / 11% 82% 18% 89%;
+   position: relative;
+   top: 3px;
+   left: 3px;
+}
+
+.trunk__fender::after {
+   content: "";
+   display: block;
+   width: 65px;
+   height: 65px;
+   background: rgb(0, 0, 0);
+   border-radius: 50%;
+   position: relative;
+   top: 21px;
+   left: 24px;
+}
+
+.trunk__wheel {
+   width: 55px;
+   height: 55px;
+   border-radius: 50%;
+   background: silver;
+   position: relative;
+   top: -60px;
+   left: 79px;
+   border: 9px solid rgba(0, 0, 0, 0.651);
+   animation-name: wheel, whe, wheel;
+   animation-duration: 2s, 5s, 5s;
+   animation-delay: 0s, 2s, 13s;
+   animation-iteration-count: 1, 1, 1;
+}
+
+.main__car:hover .trunk__wheel {
+   transform: skew(0deg, 10deg);
+}
+.main__car:hover .hood__wheel {
+   transform: skew(0deg, 10deg);
+}
+
+.trunk__wheel::before {
+   content: "";
+
+   width: 80%;
+   height: 80%;
+   border-radius: 50%;
+   background: #d5cccf;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border: 8px solid #ffa208;
+}
